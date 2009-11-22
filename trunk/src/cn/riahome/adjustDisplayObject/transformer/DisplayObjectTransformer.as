@@ -418,15 +418,9 @@ package cn.riahome.adjustDisplayObject.transformer
 		public static function scaleInBox(target:DisplayObject, boxWidth:Number, boxHeight:Number):void
 		{
 			var scale:Number = Math.min(boxWidth / target.width, boxHeight / target.height);
-			target.scaleX = scale;
-			target.scaleY = scale;
-			
-			/* 注意，此方法不完善。当 target 的 scaleX 和 scaleY 属性不为 1 时，你需要应该为：
-			
-				target.sacleX = scale * target.scaleX;
-				target.sacleY = scale * target.scaleY;
-			
-			*/
+			// target 的 scaleX 和 scaleY 属性有可能不为 1
+			target.scaleX = scale * target.scaleX;
+			target.scaleY = scale * target.scaleY;
 		}
 		
 		
