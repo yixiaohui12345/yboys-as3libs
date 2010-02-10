@@ -1,0 +1,1 @@
+asdoc -source-path F:\Project\yboys-as3libs\src -window-title "Y.Boy's AS3Libs." -doc-sources F:\Project\yboys-as3libs\src -footer "Powered by <a href='http://www.riahome.cn' target='_blank'>Y.Boy</a>. | <a href='http://code.google.com/p/yboys-as3libs/' target='_blank'>Google Code</a>" -main-title "Y.Boy's AS3Libs. API Documentation"
