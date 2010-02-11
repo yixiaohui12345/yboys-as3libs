@@ -64,12 +64,8 @@
 		  令显示对象围绕其内部的变形点进行旋转，旋转角度由 angleDegress 参数指定。
 		 
 		  </div></td><td class="summaryTableOwnerCol">DisplayObjectTransformer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#scale9()" class="signatureLink">scale9</a>(target:Bitmap, newWidth:Number, newHeight:Number, scale9Grid:Rectangle = null):BitmapData</div><div class="summaryTableDescription">[static] 
-		 对点阵图进行九切片缩放。假如未指定 scale9Grid 参数，将采用 Bitmap.scale9Grid 的值来进行缩放。
-		 
-		 注意：此函数未对 scale9Grid 参数进行验证，请确保 scale9Grid 是有效的.</div></td><td class="summaryTableOwnerCol">DisplayObjectTransformer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#scaleInBox()" class="signatureLink">scaleInBox</a>(target:DisplayObject, boxWidth:Number, boxHeight:Number):void</div><div class="summaryTableDescription">[static] 
-		 等比缩放。保持原有宽高比，对显示对象进行缩放。
-		 
-		 适用于以下情况：你想把某一张图片缩放到指定大小的区域里，而且保持原有的宽高比，不进行拉伸.</div></td><td class="summaryTableOwnerCol">DisplayObjectTransformer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#scaleX()" class="signatureLink">scaleX</a>(target:DisplayObject, newWidth:Number, scaleAxis:String):void</div><div class="summaryTableDescription">[static] 
+		 对点阵图进行九切片缩放。假如未指定 scale9Grid 参数，将采用 Bitmap.scale9Grid 的值来进行缩放.</div></td><td class="summaryTableOwnerCol">DisplayObjectTransformer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#scaleInBox()" class="signatureLink">scaleInBox</a>(target:DisplayObject, boxWidth:Number, boxHeight:Number):void</div><div class="summaryTableDescription">[static] 
+		 等比缩放。保持原有宽高比，对显示对象进行缩放.</div></td><td class="summaryTableOwnerCol">DisplayObjectTransformer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#scaleX()" class="signatureLink">scaleX</a>(target:DisplayObject, newWidth:Number, scaleAxis:String):void</div><div class="summaryTableDescription">[static] 
 		  对显示对象进行水平缩放，缩放后的新宽度由 newWidth 指定。
 		 
 		  </div></td><td class="summaryTableOwnerCol">DisplayObjectTransformer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#scaleY()" class="signatureLink">scaleY</a>(target:DisplayObject, newHeight:Number, scaleAxis:String):void</div><div class="summaryTableDescription">[static] 
@@ -187,9 +183,9 @@
 		 
 		  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">angleDegrees</span>:Number</code> &mdash; 以度为单位的旋转角度。
 		 </td></tr></table></p></div><a name="scale9()"></a><a name="scale9(flash.display.Bitmap,Number,Number,flash.geom.Rectangle)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">scale9</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function scale9(target:Bitmap, newWidth:Number, newHeight:Number, scale9Grid:Rectangle = null):BitmapData</code><p></p><p></p><p>
-		 对点阵图进行九切片缩放。假如未指定 scale9Grid 参数，将采用 Bitmap.scale9Grid 的值来进行缩放。
+		 对点阵图进行九切片缩放。假如未指定 scale9Grid 参数，将采用 Bitmap.scale9Grid 的值来进行缩放.
 		 
-		 <b>注意：</b>此函数未对 scale9Grid 参数进行验证，请确保 scale9Grid 是有效的.
+		 <b>注意：</b>此函数未对 scale9Grid 参数进行验证，请确保 scale9Grid 是有效的。
 		 
 		 <img src="scale9_exmaple.png" ></img>
 		 
@@ -200,9 +196,9 @@
 		 
 		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>BitmapData</code> &mdash; 返回 target 进行九切片缩放后的 bitmapData 数据。 
 		 </td></tr></table></div><a name="scaleInBox()"></a><a name="scaleInBox(flash.display.DisplayObject,Number,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">scaleInBox</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function scaleInBox(target:DisplayObject, boxWidth:Number, boxHeight:Number):void</code><p></p><p></p><p>
-		 等比缩放。保持原有宽高比，对显示对象进行缩放。
+		 等比缩放。保持原有宽高比，对显示对象进行缩放.
 		 
-		 适用于以下情况：你想把某一张图片缩放到指定大小的区域里，而且保持原有的宽高比，不进行拉伸.
+		 适用于以下情况：你想把某一张图片缩放到指定大小的区域里，而且保持原有的宽高比，不进行拉伸。
 		 
 		 <img src="scaleInBox_exmaple.jpg" ></img>
 		 
@@ -248,4 +244,4 @@
 		  垂直缩放时，定轴为上边缘。
 		 </p></div><a name="constantDetail"></a><a name="SCALE_AXIS_VERTICAL_CENTER"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">SCALE_AXIS_VERTICAL_CENTER</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const SCALE_AXIS_VERTICAL_CENTER:String = verticalCenter</code><p></p><p></p><p>
 		  垂直缩放时，定轴为垂直中心轴。
-		 </p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Powered by <a href='http://riaoo.com' target='_blank'>Y.Boy</a>. | <a href='http://code.google.com/p/yboys-as3libs/' target='_blank'>Google Code</a></footer><br/>Thu Feb 11 2010, 11:32 AM +08:00  </center></div></body></html><!--Powered by <a href='http://riaoo.com' target='_blank'>Y.Boy</a>. | <a href='http://code.google.com/p/yboys-as3libs/' target='_blank'>Google Code</a><br/>Thu Feb 11 2010, 11:32 AM +08:00  -->
+		 </p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Powered by <a href='http://riaoo.com' target='_blank'>Y.Boy</a>. | <a href='http://code.google.com/p/yboys-as3libs/' target='_blank'>Google Code</a></footer><br/>Thu Feb 11 2010, 03:51 PM +08:00  </center></div></body></html><!--Powered by <a href='http://riaoo.com' target='_blank'>Y.Boy</a>. | <a href='http://code.google.com/p/yboys-as3libs/' target='_blank'>Google Code</a><br/>Thu Feb 11 2010, 03:51 PM +08:00  -->
