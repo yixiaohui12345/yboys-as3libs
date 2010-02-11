@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../override.css" type="text/css"><meta name="keywords" content="DisplayObjectFilter,com.riaoo.adjustDisplayObject.filters.DisplayObjectFilter,DIGITAL_NEGATIVE_MATRIX,EDGE_DETECT_MATRIX,GRAY_SCALE_MATRIX,SHARPEN_MATRIX,diffuseFilter,getEmbossMatrix,lightingFilter,mosaicFilter,mosaicFilter2,noiseFilter,oilPaintingFilter,oldPictureFilter,pinchFilter,sketchFilter,spherizeFilter,thresholdFilter,waterColorFilter"><title>com.riaoo.adjustDisplayObject.filters.DisplayObjectFilter</title></head><body><script language="javascript" type="text/javascript" src="../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'DisplayObjectFilter - Y.Boy's AS3Libs.';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">Y.Boy's AS3Libs. API Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../package-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../class-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../all-index-A.html" onclick="loadClassListFrame('../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../index.html?com/riaoo/adjustDisplayObject/filters/DisplayObjectFilter.html&amp;com/riaoo/adjustDisplayObject/filters/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">DisplayObjectFilter</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#methodSummary">Methods</a>&nbsp;| <a href="#constantSummary">Constants</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("DisplayObjectFilter"); titleBar_setSubNav(true,false,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.riaoo.adjustDisplayObject.filters</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  DisplayObjectFilter</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">DisplayObjectFilter  <img src="../../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><p></p><p></p>
+	  DisplayObjectFilters 类包含各种对显示对象进行过滤的常数值和方法，包括：相底反色效果、灰度、查找边缘、锐化、马赛克效果（两种方法）、浮雕效果、杂点效果、素描效果、水彩效果、扩散效果（毛玻璃效果）、球面效果（鱼眼效果）、挤压效果、光照效果（高光效果）、PS里的颜色阈值效果、油画效果、旧照片效果。
+	 <p></p><br/><hr></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#DisplayObjectFilter()" class="signatureLink">DisplayObjectFilter</a>()</div><div class="summaryTableDescription">
+	      构造函数
+	      本类所有方法均为静态方法，不应创建实例。
+	     </div></td><td class="summaryTableOwnerCol">DisplayObjectFilter</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#diffuseFilter()" class="signatureLink">diffuseFilter</a>(source:BitmapData, scaleX:Number = 5, scaleY:Number = 5):BitmapData</div><div class="summaryTableDescription">[static] 
+		  扩散效果（毛玻璃效果）
+		 
+		  </div></td><td class="summaryTableOwnerCol">DisplayObjectFilter</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getEmbossMatrix()" class="signatureLink">getEmbossMatrix</a>(value:Number):Array</div><div class="summaryTableDescription">[static] 
+		  浮雕效果
+		 
+		  </div></td><td class="summaryTableOwnerCol">DisplayObjectFilter</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#lightingFilter()" class="signatureLink">lightingFilter</a>(source:BitmapData, targetX:int, targetY:int, radius:int = 0, power:Number = 128):BitmapData</div><div class="summaryTableDescription">[static] 
+		  光照效果（高光效果）
+		 
+		  </div></td><td class="summaryTableOwnerCol">DisplayObjectFilter</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#mosaicFilter()" class="signatureLink">mosaicFilter</a>(source:BitmapData, block:Number = 5):BitmapData</div><div class="summaryTableDescription">[static] 
+		  马赛克效果（算法一）
+		 
+		  </div></td><td class="summaryTableOwnerCol">DisplayObjectFilter</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#mosaicFilter2()" class="signatureLink">mosaicFilter2</a>(source:DisplayObject, scale:Number):BitmapData</div><div class="summaryTableDescription">[static] 
+		  马赛克效果（算法二）。此方法比算法一执行效率要快，但这是非正式的马赛克算法。
+		 
+		  </div></td><td class="summaryTableOwnerCol">DisplayObjectFilter</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#noiseFilter()" class="signatureLink">noiseFilter</a>(source:BitmapData, degree:Number = 128):BitmapData</div><div class="summaryTableDescription">[static] 
+		  杂点效果
+		 
+		  </div></td><td class="summaryTableOwnerCol">DisplayObjectFilter</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#oilPaintingFilter()" class="signatureLink">oilPaintingFilter</a>(source:BitmapData, brushSize:Number = 1, coarseness:Number = 32):BitmapData</div><div class="summaryTableDescription">[static] 
+		  油画效果
+		 
+		  </div></td><td class="summaryTableOwnerCol">DisplayObjectFilter</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#oldPictureFilter()" class="signatureLink">oldPictureFilter</a>(source:BitmapData):BitmapData</div><div class="summaryTableDescription">[static] 
+		  旧照片效果
+		 
+		  </div></td><td class="summaryTableOwnerCol">DisplayObjectFilter</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#pinchFilter()" class="signatureLink">pinchFilter</a>(source:BitmapData, targetX:int, targetY:int, degree:Number = 16):BitmapData</div><div class="summaryTableDescription">[static] 
+		  挤压效果
+		 
+		  </div></td><td class="summaryTableOwnerCol">DisplayObjectFilter</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#sketchFilter()" class="signatureLink">sketchFilter</a>(source:BitmapData, threshold:Number = 5):BitmapData</div><div class="summaryTableDescription">[static] 
+		  素描效果
+		 
+		  </div></td><td class="summaryTableOwnerCol">DisplayObjectFilter</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#spherizeFilter()" class="signatureLink">spherizeFilter</a>(source:BitmapData, targetX:int, targetY:int):BitmapData</div><div class="summaryTableDescription">[static] 
+		  球面效果（鱼眼效果）
+		 
+		  </div></td><td class="summaryTableOwnerCol">DisplayObjectFilter</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#thresholdFilter()" class="signatureLink">thresholdFilter</a>(source:BitmapData, threshold:uint = 128):BitmapData</div><div class="summaryTableDescription">[static] 
+		  PS里的颜色阈值效果
+		 
+		  </div></td><td class="summaryTableOwnerCol">DisplayObjectFilter</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#waterColorFilter()" class="signatureLink">waterColorFilter</a>(source:BitmapData, scaleX:Number = 5, scaleY:Number = 5):BitmapData</div><div class="summaryTableDescription">[static] 
+		  水彩效果
+		 
+		  </div></td><td class="summaryTableOwnerCol">DisplayObjectFilter</td></tr></table></div><a name="constantSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Constants</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableConstant"><tr><th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#DIGITAL_NEGATIVE_MATRIX" class="signatureLink">DIGITAL_NEGATIVE_MATRIX</a> : Array<div class="summaryTableDescription">[static] 
+		  相底反色效果。
+		 
+		  一个给 ColorMatrixFilter 对象作参数用的描述相底反色的常数数组。
+		 </div></td><td class="summaryTableOwnerCol">DisplayObjectFilter</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#EDGE_DETECT_MATRIX" class="signatureLink">EDGE_DETECT_MATRIX</a> : Array<div class="summaryTableDescription">[static] 
+		  查找边缘
+		 
+		  一个给 ConvolutionFilter 对象作参数用的描述查找边缘的常数数组。
+		 </div></td><td class="summaryTableOwnerCol">DisplayObjectFilter</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#GRAY_SCALE_MATRIX" class="signatureLink">GRAY_SCALE_MATRIX</a> : Array<div class="summaryTableDescription">[static] 
+		  灰度
+		 
+		  一个给 ColorMatrixFilter 对象作参数用的描述灰度的常数数组。
+		 </div></td><td class="summaryTableOwnerCol">DisplayObjectFilter</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#SHARPEN_MATRIX" class="signatureLink">SHARPEN_MATRIX</a> : Array<div class="summaryTableDescription">[static] 
+		  锐化
+		 
+		  一个给 ConvolutionFilter 对象作参数用的描述锐化的常数数组。
+		 </div></td><td class="summaryTableOwnerCol">DisplayObjectFilter</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="DisplayObjectFilter()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">DisplayObjectFilter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function DisplayObjectFilter()</code><p></p><p>
+	      构造函数
+	      <p>本类所有方法均为静态方法，不应创建实例。</p>
+	     </p></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="diffuseFilter()"></a><a name="diffuseFilter(flash.display.BitmapData,Number,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">diffuseFilter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public static function diffuseFilter(source:BitmapData, scaleX:Number = 5, scaleY:Number = 5):BitmapData</code><p></p><p></p><p>
+		  扩散效果（毛玻璃效果）
+		 
+		  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">source</span>:BitmapData</code> &mdash; 需要添加扩散效果的 BitmapData 对象。
+		 
+		  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">scaleX</span>:Number</code> (default = <code>5</code>)<code></code> &mdash; X 径向扩散。
+		 
+		  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">scaleY</span>:Number</code> (default = <code>5</code>)<code></code> &mdash; Y 径向扩散。
+		 
+		  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>BitmapData</code></td></tr></table></div><a name="getEmbossMatrix()"></a><a name="getEmbossMatrix(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getEmbossMatrix</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function getEmbossMatrix(value:Number):Array</code><p></p><p></p><p>
+		  浮雕效果
+		 
+		  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:Number</code> &mdash; 浮雕程度值。
+		 
+		  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Array</code></td></tr></table></div><a name="lightingFilter()"></a><a name="lightingFilter(flash.display.BitmapData,int,int,int,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">lightingFilter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function lightingFilter(source:BitmapData, targetX:int, targetY:int, radius:int = 0, power:Number = 128):BitmapData</code><p></p><p></p><p>
+		  光照效果（高光效果）
+		 
+		  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">source</span>:BitmapData</code> &mdash; 需要添加光照效果的 BitmapData 对象。
+		 
+		  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">targetX</span>:int</code> &mdash; 光照效果的中心点 x 坐标。
+		 
+		  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">targetY</span>:int</code> &mdash; 光照效果的中心点 y 坐标。
+		 
+		  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">radius</span>:int</code> (default = <code>0</code>)<code></code> &mdash; 光照圈的半径。
+		 
+		  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">power</span>:Number</code> (default = <code>128</code>)<code></code> &mdash; 施加光照的强度。范围在 [0, 255]。
+		 
+		  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>BitmapData</code></td></tr></table></div><a name="mosaicFilter()"></a><a name="mosaicFilter(flash.display.BitmapData,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">mosaicFilter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function mosaicFilter(source:BitmapData, block:Number = 5):BitmapData</code><p></p><p></p><p>
+		  马赛克效果（算法一）
+		 
+		  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">source</span>:BitmapData</code> &mdash; 要施加马赛克效果的 BitmapData 对象。
+		 
+		  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">block</span>:Number</code> (default = <code>5</code>)<code></code> &mdash; 每块马赛克（正方形）的大小，单位：像素。
+		 
+		  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>BitmapData</code></td></tr></table></div><a name="mosaicFilter2()"></a><a name="mosaicFilter2(flash.display.DisplayObject,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">mosaicFilter2</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function mosaicFilter2(source:DisplayObject, scale:Number):BitmapData</code><p></p><p></p><p>
+		  马赛克效果（算法二）。此方法比算法一执行效率要快，但这是非正式的马赛克算法。
+		 
+		  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">source</span>:DisplayObject</code> &mdash; 要施加马赛克效果的 DisplayObject 对象。
+		 
+		  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">scale</span>:Number</code> &mdash; 马赛克效果的程度，等同于以此参数为缩小率把 source 缩小后的马赛克程度，范围在 [0.0001, 1]，当值小于 0.0001 时以 0.0001 计算；当值大于 1 时，以 1 计算。
+		 
+		  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>BitmapData</code></td></tr></table></div><a name="noiseFilter()"></a><a name="noiseFilter(flash.display.BitmapData,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">noiseFilter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function noiseFilter(source:BitmapData, degree:Number = 128):BitmapData</code><p></p><p></p><p>
+		  杂点效果
+		 
+		  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">source</span>:BitmapData</code> &mdash; 需要添加杂点效果的 BitmapData 对象。
+		 
+		  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">degree</span>:Number</code> (default = <code>128</code>)<code></code> &mdash; 杂点程度值，范围在 [0, 255]。
+		 
+		  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>BitmapData</code></td></tr></table></div><a name="oilPaintingFilter()"></a><a name="oilPaintingFilter(flash.display.BitmapData,Number,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">oilPaintingFilter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function oilPaintingFilter(source:BitmapData, brushSize:Number = 1, coarseness:Number = 32):BitmapData</code><p></p><p></p><p>
+		  油画效果
+		 
+		  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">source</span>:BitmapData</code> &mdash; 需要添加油画效果的 BitmapData 对象。
+		 
+		  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">brushSize</span>:Number</code> (default = <code>1</code>)<code></code> &mdash; 笔刷大小。范围在 [1, 8]。
+		 
+		  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">coarseness</span>:Number</code> (default = <code>32</code>)<code></code> &mdash; 粗糙值。范围在 [1, 255]。
+		 
+		  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>BitmapData</code></td></tr></table></div><a name="oldPictureFilter()"></a><a name="oldPictureFilter(flash.display.BitmapData)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">oldPictureFilter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function oldPictureFilter(source:BitmapData):BitmapData</code><p></p><p></p><p>
+		  旧照片效果
+		 
+		  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">source</span>:BitmapData</code> &mdash; 需要添加旧照片效果的 BitmapData 对象。
+		 
+		  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>BitmapData</code></td></tr></table></div><a name="pinchFilter()"></a><a name="pinchFilter(flash.display.BitmapData,int,int,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">pinchFilter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function pinchFilter(source:BitmapData, targetX:int, targetY:int, degree:Number = 16):BitmapData</code><p></p><p></p><p>
+		  挤压效果
+		 
+		  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">source</span>:BitmapData</code> &mdash; 需要添加挤压效果的 BitmapData 对象。
+		 
+		  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">targetX</span>:int</code> &mdash; 挤压的中心点 x 坐标。
+		 
+		  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">targetY</span>:int</code> &mdash; 挤压的中心点 y 坐标。
+		 
+		  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">degree</span>:Number</code> (default = <code>16</code>)<code></code> &mdash; 挤压程度值。
+		 
+		  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>BitmapData</code></td></tr></table></div><a name="sketchFilter()"></a><a name="sketchFilter(flash.display.BitmapData,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">sketchFilter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function sketchFilter(source:BitmapData, threshold:Number = 5):BitmapData</code><p></p><p></p><p>
+		  素描效果
+		 
+		  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">source</span>:BitmapData</code> &mdash; 需要添加素描效果的 BitmapData 对象。
+		 
+		  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">threshold</span>:Number</code> (default = <code>5</code>)<code></code> &mdash; 门槛值。值越大，素描线越少。范围建议在 [0, 20]。
+		 
+		  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>BitmapData</code></td></tr></table></div><a name="spherizeFilter()"></a><a name="spherizeFilter(flash.display.BitmapData,int,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">spherizeFilter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function spherizeFilter(source:BitmapData, targetX:int, targetY:int):BitmapData</code><p></p><p></p><p>
+		  球面效果（鱼眼效果）
+		 
+		  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">source</span>:BitmapData</code> &mdash; 需要添加球面效果（鱼眼效果）的 BitmapData 对象。
+		 
+		  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">targetX</span>:int</code> &mdash; 球面的中心点 x 坐标。
+		 
+		  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">targetY</span>:int</code> &mdash; 球面的中心点 y 坐标。
+		 
+		  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>BitmapData</code></td></tr></table></div><a name="thresholdFilter()"></a><a name="thresholdFilter(flash.display.BitmapData,uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">thresholdFilter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function thresholdFilter(source:BitmapData, threshold:uint = 128):BitmapData</code><p></p><p></p><p>
+		  PS里的颜色阈值效果
+		 
+		  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">source</span>:BitmapData</code> &mdash; 需要添加颜色阈值效果的 BitmapData 对象。
+		 
+		  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">threshold</span>:uint</code> (default = <code>128</code>)<code></code> &mdash; 阈值。范围在 [0, 255]。
+		 
+		  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>BitmapData</code></td></tr></table></div><a name="waterColorFilter()"></a><a name="waterColorFilter(flash.display.BitmapData,Number,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">waterColorFilter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function waterColorFilter(source:BitmapData, scaleX:Number = 5, scaleY:Number = 5):BitmapData</code><p></p><p></p><p>
+		  水彩效果
+		 
+		  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">source</span>:BitmapData</code> &mdash; 需要添加水彩效果的 BitmapData 对象。
+		 
+		  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">scaleX</span>:Number</code> (default = <code>5</code>)<code></code> &mdash; X 径向晕彩。
+		 
+		  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">scaleY</span>:Number</code> (default = <code>5</code>)<code></code> &mdash; Y 径向晕彩。
+		 
+		  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>BitmapData</code></td></tr></table></div><div class="detailSectionHeader">Constant Detail</div><a name="constantDetail"></a><a name="DIGITAL_NEGATIVE_MATRIX"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">DIGITAL_NEGATIVE_MATRIX</td><td class="detailHeaderType">Constant</td></tr></table><div class="detailBody"><code>public static const DIGITAL_NEGATIVE_MATRIX:Array</code><p></p><p></p><p>
+		  相底反色效果。
+		 
+		  <p>一个给 ColorMatrixFilter 对象作参数用的描述相底反色的常数数组。</p>
+		 </p></div><a name="constantDetail"></a><a name="EDGE_DETECT_MATRIX"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">EDGE_DETECT_MATRIX</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const EDGE_DETECT_MATRIX:Array</code><p></p><p></p><p>
+		  查找边缘
+		 
+		  <p>一个给 ConvolutionFilter 对象作参数用的描述查找边缘的常数数组。</p>
+		 </p></div><a name="constantDetail"></a><a name="GRAY_SCALE_MATRIX"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">GRAY_SCALE_MATRIX</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const GRAY_SCALE_MATRIX:Array</code><p></p><p></p><p>
+		  灰度
+		 
+		  <p>一个给 ColorMatrixFilter 对象作参数用的描述灰度的常数数组。</p>
+		 </p></div><a name="constantDetail"></a><a name="SHARPEN_MATRIX"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">SHARPEN_MATRIX</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const SHARPEN_MATRIX:Array</code><p></p><p></p><p>
+		  锐化
+		 
+		  <p>一个给 ConvolutionFilter 对象作参数用的描述锐化的常数数组。</p>
+		 </p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Powered by <a href='http://riaoo.com' target='_blank'>Y.Boy</a>. | <a href='http://code.google.com/p/yboys-as3libs/' target='_blank'>Google Code</a></footer><br/>Thu Feb 11 2010, 11:32 AM +08:00  </center></div></body></html><!--Powered by <a href='http://riaoo.com' target='_blank'>Y.Boy</a>. | <a href='http://code.google.com/p/yboys-as3libs/' target='_blank'>Google Code</a><br/>Thu Feb 11 2010, 11:32 AM +08:00  -->
