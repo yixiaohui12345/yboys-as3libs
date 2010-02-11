@@ -356,9 +356,9 @@ package com.riaoo.adjustDisplayObject.transformer
 		}
 		
 		/**
-		 * 对点阵图进行九切片缩放。假如未指定 scale9Grid 参数，将采用 Bitmap.scale9Grid 的值来进行缩放。
+		 * 对点阵图进行九切片缩放。假如未指定 scale9Grid 参数，将采用 Bitmap.scale9Grid 的值来进行缩放.
 		 * <br />
-		 * <strong>注意：</strong>此函数未对 scale9Grid 参数进行验证，请确保 scale9Grid 是有效的.
+		 * <strong>注意：</strong>此函数未对 scale9Grid 参数进行验证，请确保 scale9Grid 是有效的。
 		 * <br />
 		 * <img src="scale9_exmaple.png" />
 		 * 
@@ -404,9 +404,9 @@ package com.riaoo.adjustDisplayObject.transformer
 		}
 		
 		/**
-		 * 等比缩放。保持原有宽高比，对显示对象进行缩放。
+		 * 等比缩放。保持原有宽高比，对显示对象进行缩放.
 		 * <br />
-		 * 适用于以下情况：你想把某一张图片缩放到指定大小的区域里，而且保持原有的宽高比，不进行拉伸.
+		 * 适用于以下情况：你想把某一张图片缩放到指定大小的区域里，而且保持原有的宽高比，不进行拉伸。
 		 * <br />
 		 * <img src="scaleInBox_exmaple.jpg" />
 		 * 
