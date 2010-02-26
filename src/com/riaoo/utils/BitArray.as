@@ -9,6 +9,11 @@ package com.riaoo.utils
 	 */	
 	public class BitArray extends ByteArray
 	{
+		/**
+		 * 构造函数。可传递一个 ByteArray 对象进行初始化。
+		 * @param bytes 现有的 ByteArray 数据。
+		 * 
+		 */		
 		public function BitArray(bytes:ByteArray = null)
 		{
 			if (bytes != null)
