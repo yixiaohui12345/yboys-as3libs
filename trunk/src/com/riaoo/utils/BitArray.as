@@ -1,4 +1,4 @@
-package com.riaoo.utils
+package com.smartgf.utils
 {
 	import flash.utils.ByteArray;
 	
@@ -71,6 +71,20 @@ package com.riaoo.utils
 			{
 				this[byteIndex] &= ~flag; // 取消位，即赋值 0
 			}
+		}
+		
+		/**
+		 * 获取指定坐标处的值，x 轴方向的长度由 lengthX 指定。
+		 * @param lengthX x 轴方向上的长度。
+		 * @param x x 坐标。
+		 * @param y y 坐标。
+		 * @return 指定坐标处的值。
+		 * 
+		 */		
+		public function getBitAtPoint(lengthX:uint, x:uint, y:uint):Boolean
+		{
+			var i:uint = y * lengthX + x;
+			return this.getBitAt(i);
 		}
 		
 	}
