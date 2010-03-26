@@ -1,4 +1,4 @@
-package com.smartgf.utils
+package com.riaoo.utils
 {
 	import flash.utils.ByteArray;
 	
