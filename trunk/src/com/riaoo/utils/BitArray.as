@@ -23,6 +23,16 @@ package com.riaoo.utils
 		}
 		
 		/**
+		 * 返回位长度。bitLength = ByteArray.length * 8 。
+		 * @return 
+		 * 
+		 */		
+		public function get bitLength():uint
+		{
+			return this.length * 8;
+		}
+		
+		/**
 		 * 返回由参数 index 指定位置处的位的值。1 为 true，0 为 false 。
 		 * @param index 一个整数，指示位在 ByteArray 中的位置。第一个位由 0 指示，最后一个位由 BitArray.length * 8 - 1 指示。
 		 * @return 指示索引处的位的值。或者，如果指定的索引不在该 ByteArray 的索引范围内，会抛出 RangeErroe 错误，并返回 false 。
@@ -81,7 +91,7 @@ package com.riaoo.utils
 		 * @return 指定坐标处的值。
 		 * 
 		 */		
-		public function getBitAtPoint(lengthX:uint, x:uint, y:uint):Boolean
+		public function getBitAtCoord(lengthX:uint, x:uint, y:uint):Boolean
 		{
 			var i:uint = y * lengthX + x;
 			return this.getBitAt(i);
