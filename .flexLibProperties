@@ -2,6 +2,21 @@
 <flexLibProperties includeAllClasses="true" version="3">
   <includeClasses>
     <classEntry path="com.riaoo.utils.Logic"/>
+    <classEntry path="com.riaoo.javascript.JSEval"/>
+    <classEntry path="com.riaoo.javascript.test.History"/>
+    <classEntry path="com.riaoo.javascript.test.Screen"/>
+    <classEntry path="com.riaoo.javascript.IWindow"/>
+    <classEntry path="com.riaoo.javascript.IDocument"/>
+    <classEntry path="com.riaoo.javascript.IHistory"/>
+    <classEntry path="com.riaoo.javascript.ILocation"/>
+    <classEntry path="com.riaoo.javascript.INavigator"/>
+    <classEntry path="com.riaoo.javascript.IScreen"/>
+    <classEntry path="com.riaoo.javascript.WindowFeatures"/>
+    <classEntry path="com.riaoo.javascript.ICookie"/>
+    <classEntry path="com.riaoo.managers.QueueLoaderManager"/>
+    <classEntry path="com.riaoo.managers.QueueLoader"/>
+    <classEntry path="com.riaoo.managers.QueueLoaderDataFormat"/>
+    <classEntry path="com.riaoo.utils.SWFLibrary"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
