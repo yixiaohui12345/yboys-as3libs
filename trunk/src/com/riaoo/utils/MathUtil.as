@@ -33,5 +33,34 @@ package com.riaoo.utils
 			return num;
 		}
 		
+		/**
+		 * 计算参数 num 的阶乘。零的阶乘为 1 。
+		 * <br />
+		 * 阶乘：n 的阶乘为 n * (n - 1) * (n - 2) * ... * 2 * 1
+		 * @param num 用来计算阶乘的数字。
+		 * @return 返回 num 的阶乘。
+		 * 
+		 */		
+		public static function factorial(num:Number):Number
+		{
+			if (num == 0)
+			{
+				return 1;
+			}
+			
+			return num * factorial(num - 1);
+		}
+		
+		/**
+		 * 判断一个数是不是奇数。
+		 * @param num 待判断的数。
+		 * @return 如果是奇数，则返回 true ；是偶数，则返回 false 。
+		 * 
+		 */		
+		public static function isOdd(num:Number):Boolean
+		{
+			return Boolean(num & 1);
+		}
+		
 	}
 }

@@ -155,7 +155,10 @@ package com.riaoo.file.zip
 		
 		/**
 		 * 获取 zip 文件包里指定的文件字节数据。
+		 * @param entry 一个 ZipEntry 对象。通常由 getEntry() 方法获得。
 		 * @return 返回文件解压缩后的字节数据。
+		 * 
+		 * @see getEntry()
 		 * 
 		 */		
 		public function getEntryData(entry:ZipEntry):ByteArray
