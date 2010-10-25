@@ -17,6 +17,10 @@
     <classEntry path="com.riaoo.managers.QueueLoader"/>
     <classEntry path="com.riaoo.managers.QueueLoaderDataFormat"/>
     <classEntry path="com.riaoo.utils.SWFLibrary"/>
+    <classEntry path="com.riaoo.utils.ArrayUtil"/>
+    <classEntry path="com.riaoo.ui.Key"/>
+    <classEntry path="com.riaoo.events.KeyComboEvent"/>
+    <classEntry path="com.riaoo.ui.KeyCombo"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
