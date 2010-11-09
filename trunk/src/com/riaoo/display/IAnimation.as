@@ -60,5 +60,10 @@ package com.riaoo.display
 		 *
 		 */
 		function stop():void;
+		
+		/**
+		 * 销毁。
+		 */		
+		function dispose():void;
 	}
 }

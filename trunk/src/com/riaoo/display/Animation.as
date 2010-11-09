@@ -9,8 +9,8 @@ package com.riaoo.display
 	import flash.utils.Timer;
 	import flash.utils.getTimer;
 
-	[Event(name="animationEnterFrame",type="com.sgf.events.AnimationEvent")]
-	[Event(name="animationEnd",type="com.sgf.events.AnimationEvent")]
+	[Event(name="animationEnterFrame",type="com.riaoo.events.AnimationEvent")]
+	[Event(name="animationEnd",type="com.riaoo.events.AnimationEvent")]
 
 	/**
 	 * 此类用于播放位图序列。可按指定的时间间隔（delay 属性）来播放每一帧。动画的重复次数由 timer.repeatCount 指定。
@@ -79,7 +79,6 @@ package com.riaoo.display
 			this.frameSequence = frameSequence;
 			this.delay = delay;
 			this.cache = cache;
-			this.addEventListener(Event.REMOVED_FROM_STAGE, onRemovedFromStage);
 		}
 
 		public function get currentFrame():uint
@@ -149,11 +148,17 @@ package com.riaoo.display
 				this.timer.removeEventListener(TimerEvent.TIMER, onTimer);
 			}
 		}
+		
+		public function dispose():void
+		{
+			stop();
+			this.timer = null;
+			this.frameSequence = null;
+		}
 
 		/**
 		 * 设置缓冲区（Bitmap.bitmapData）。
 		 * @param frameIndex 帧编号。
-		 *
 		 */
 		protected function setBuffer(frameIndex:uint):void
 		{
@@ -268,17 +273,6 @@ package com.riaoo.display
 			// 调度 ENTER_FRAME 事件
 			//----------
 			dispatchEvent(new AnimationEvent(AnimationEvent.ANIMATION_ENTER_FRAME));
-		}
-
-		// good bye...
-		private function onRemovedFromStage(event:Event):void
-		{
-			stop();
-
-			return;
-			this.timer = null;
-			this.frameSequence = null;
-			this.removeEventListener(Event.REMOVED_FROM_STAGE, onRemovedFromStage);
 		}
 
 	}
