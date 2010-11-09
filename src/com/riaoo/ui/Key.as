@@ -33,13 +33,20 @@ package com.riaoo.ui
 		private var getTime:uint; // 上一次的 getTimer() 值
 		
 		/**
+		 * 是否支持按着键。即按住一个键时，是否连续调度 KEY_DOWN 事件。
+		 */		
+		public var supportDownKey:Boolean;
+		
+		/**
 		 * 构造函数。
 		 * @param stage Stage 对象。
 		 * @param idle 连续按键之间所需的相隔时间（毫秒）。用户必须在此时间间隔内连续按键才产生“连招”。
 		 * <br />当值为 0 时，表示连续按键间所需的时间要求为无限大（即无时间限制）。
+		 * @param supportDownKey 是否支持按着键。即按住一个键时，是否连续调度 KEY_DOWN 事件。
 		 */		
-		public function Key(stage:Stage, idle:uint = 0)
+		public function Key(stage:Stage, idle:uint = 0, supportDownKey:Boolean = false)
 		{
+			this.supportDownKey = supportDownKey;
 			this.idle = idle;
 			this.stage = stage;
 			this.stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyDown);
@@ -144,6 +151,11 @@ package com.riaoo.ui
 		{
 			var keyCode:uint = event.keyCode;
 			var alreadyDown:Boolean = this.keysDown[keyCode];
+			if (alreadyDown && !this.supportDownKey)
+			{
+				return;
+			}
+			
 			this.keysDown[keyCode] = true;
 			var l:uint = this.combos.length;
 			
@@ -155,10 +167,7 @@ package com.riaoo.ui
 				// 检测组合键
 				while (l--)
 				{
-					if (!alreadyDown)
-					{
-						checkDownKeys(this.combos[l]);
-					}
+					checkDownKeys(this.combos[l]);
 				}
 			}
 			else
@@ -175,11 +184,7 @@ package com.riaoo.ui
 				while (l--)
 				{
 					checkTypedKeys(this.combos[l]);
-					
-					if (!alreadyDown)
-					{
-						checkDownKeys(this.combos[l]);
-					}
+					checkDownKeys(this.combos[l]);
 				}
 			}
 			
@@ -251,7 +256,20 @@ package com.riaoo.ui
 				}
 			}
 			
-			this.combosDown.push(keyCombo);
+			l = this.combosDown.length;
+			var aleadyDown:Boolean = false;
+			while (l--)
+			{
+				if (this.combosDown[l] === keyCombo) // 已经存在已按下的组合键
+				{
+					aleadyDown = true;
+					break;
+				}
+			}
+			if (!aleadyDown)
+			{
+				this.combosDown.push(keyCombo);
+			}
 			
 			var e:KeyComboEvent = new KeyComboEvent(KeyComboEvent.DOWN);
 			e.keyCombo = keyCombo;
