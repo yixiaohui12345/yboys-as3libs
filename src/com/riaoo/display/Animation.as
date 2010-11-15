@@ -1,11 +1,12 @@
 package com.riaoo.display
 {
 	import com.riaoo.events.AnimationEvent;
-
+	
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;
 	import flash.events.Event;
 	import flash.events.TimerEvent;
+	import flash.utils.Dictionary;
 	import flash.utils.Timer;
 	import flash.utils.getTimer;
 
@@ -24,7 +25,12 @@ package com.riaoo.display
 	public class Animation extends Bitmap implements IAnimation
 	{
 		private var getTimer_prev:int; // 上一次 getTimer() 的取值
-
+		
+		/**
+		 * 帧上的函数。
+		 */		
+		protected var frameScriptHash:Dictionary;
+		
 		/**
 		 * 当前播放头所处的帧编号。
 		 */
@@ -267,13 +273,65 @@ package com.riaoo.display
 					var frameIndex:int = (_currentFrame + offsetFrame) % this.frameSequence.length;
 					gotoAndPlay(frameIndex);
 				}
+				
+				//----------
+				// 调度 ENTER_FRAME 事件
+				//----------
+				dispatchEvent(new AnimationEvent(AnimationEvent.ANIMATION_ENTER_FRAME));
+				
+				//----------
+				// 执行帧代码。
+				//----------
+				if (this.frameScriptHash)
+				{
+					var func:Function = this.frameScriptHash[this.currentFrame];
+					if (func != null)
+					{
+						func();
+					}
+				}
 			}
-
-			//----------
-			// 调度 ENTER_FRAME 事件
-			//----------
-			dispatchEvent(new AnimationEvent(AnimationEvent.ANIMATION_ENTER_FRAME));
 		}
+		
+		// good bye...
+		private function onRemovedFromStage(event:Event):void
+		{
+			stop();
 
+			return;
+			this.timer = null;
+			this.frameSequence = null;
+			this.removeEventListener(Event.REMOVED_FROM_STAGE, onRemovedFromStage);
+		}
+		
+		/**
+		 * 向指定帧添加代码。
+		 * @param frameIndex 帧索引。
+		 * @param func 要执行的函数。
+		 */		
+		public function addFrameScript(frameIndex:uint, func:Function):void
+		{
+			if (!this.frameScriptHash)
+			{
+				this.frameScriptHash = new Dictionary();
+			}
+			
+			this.frameScriptHash[frameIndex] = func;
+		}
+		
+		/**
+		 * 移除指定帧上的代码。
+		 * @param frameIndex 帧索引。
+		 */		
+		public function removeFrameScript(frameIndex:uint):void
+		{
+			if (!this.frameScriptHash)
+			{
+				return;
+			}
+			
+			delete this.frameScriptHash[frameIndex];
+		}
+		
 	}
 }
