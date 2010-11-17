@@ -21,6 +21,7 @@
     <classEntry path="com.riaoo.ui.Key"/>
     <classEntry path="com.riaoo.events.KeyComboEvent"/>
     <classEntry path="com.riaoo.ui.KeyCombo"/>
+    <classEntry path="com.riaoo.utils.FunctionUtil"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
