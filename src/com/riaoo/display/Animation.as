@@ -32,6 +32,11 @@ package com.riaoo.display
 		protected var frameScriptHash:Dictionary;
 		
 		/**
+		 * 帧与帧之间的播放时间间隔（以毫秒为单位）。默认为 100 毫秒。
+		 */		
+		protected var _delay:int;
+		
+		/**
 		 * 当前播放头所处的帧编号。
 		 */
 		protected var _currentFrame:int;
@@ -50,11 +55,6 @@ package com.riaoo.display
 		 * 用于播放的位图序列（帧队列）。
 		 */
 		public var frameSequence:IFrameSequence;
-
-		/**
-		 * 帧与帧之间的播放时间间隔（以毫秒为单位）。默认为 100 毫秒。
-		 */
-		public var delay:int;
 
 		/**
 		 * 指示是否采用位图副本进行播放。采用位图副本进行播放时，会占用额外的内存，但可以确保帧队列（frameSequence）里的位图不被修改。
@@ -86,7 +86,18 @@ package com.riaoo.display
 			this.delay = delay;
 			this.cache = cache;
 		}
-
+		
+		public function get delay():int
+		{
+			return _delay;
+		}
+		
+		public function set delay(value:int):void
+		{
+			_delay = value;
+			adjustGetTimer();
+		}
+		
 		public function get currentFrame():uint
 		{
 			return _currentFrame;
@@ -143,6 +154,7 @@ package com.riaoo.display
 				_isPlaying = true;
 				this.timer.addEventListener(TimerEvent.TIMER, onTimer);
 				this.timer.start();
+				adjustGetTimer();
 			}
 		}
 
@@ -195,22 +207,20 @@ package com.riaoo.display
 			}
 
 			var length:uint = this.frameSequence.length;
-			if (length < 2) // 只有一帧或没有帧时返回
+			if (length == 0) // 没有
 			{
+				return;
+			}
+			
+			if (length == 1) // 只有一帧
+			{
+				setBuffer(0);
 				return;
 			}
 
 			if (_currentFrame < length - 1) // 如果还有下一帧
 			{
 				_currentFrame++;
-
-				if (_currentFrame == this.frameSequence.length - 1)
-				{
-					//----------
-					// 调度 END 事件
-					//----------
-					dispatchEvent(new AnimationEvent(AnimationEvent.ANIMATION_END));
-				}
 			}
 			else // 没有下一帧，回播
 			{
@@ -231,12 +241,18 @@ package com.riaoo.display
 			}
 
 			var length:uint = this.frameSequence.length;
-			if (length < 2) // 只有一帧或没有帧时返回
+			if (length == 0)
 			{
 				return;
 			}
+			
+			if (length == 1) // 只有一帧
+			{
+				setBuffer(0);
+				return;
+			}
 
-			if (_currentFrame > 0) // 如果还有上一帧
+			if (_currentFrame > 0 && _currentFrame < length) // 如果还有上一帧
 			{
 				_currentFrame--;
 			}
@@ -262,6 +278,21 @@ package com.riaoo.display
 			var offsetTime:int = now - this.getTimer_prev; // 两次 getTimer() 之差
 			if (offsetTime >= this.delay) // 当：时差 >= 播放的延迟间隔
 			{
+				//----------
+				// 调度 END 事件
+				//----------
+				if (_currentFrame == this.frameSequence.length - 1)
+				{
+					dispatchEvent(new AnimationEvent(AnimationEvent.ANIMATION_END));
+					if (!_isPlaying)
+					{
+						return;
+					}
+				}
+				
+				//----------
+				// 播放帧
+				//----------
 				this.getTimer_prev = now;
 				var offsetFrame:int = int(offsetTime / this.delay);
 				if (offsetFrame == 1) // 下一帧
@@ -275,21 +306,21 @@ package com.riaoo.display
 				}
 				
 				//----------
-				// 调度 ENTER_FRAME 事件
-				//----------
-				dispatchEvent(new AnimationEvent(AnimationEvent.ANIMATION_ENTER_FRAME));
-				
-				//----------
-				// 执行帧代码。
+				// 执行帧代码
 				//----------
 				if (this.frameScriptHash)
 				{
-					var func:Function = this.frameScriptHash[this.currentFrame];
+					var func:Function = this.frameScriptHash[_currentFrame];
 					if (func != null)
 					{
 						func();
 					}
 				}
+				
+				//----------
+				// 调度 ENTER_FRAME 事件
+				//----------
+				dispatchEvent(new AnimationEvent(AnimationEvent.ANIMATION_ENTER_FRAME));
 			}
 		}
 		
@@ -331,6 +362,12 @@ package com.riaoo.display
 			}
 			
 			delete this.frameScriptHash[frameIndex];
+		}
+		
+		// 调整 getTimer_prev 的值。在重新播放和 delay 属性被改变时需要此方法。
+		private function adjustGetTimer():void
+		{
+			this.getTimer_prev = getTimer();
 		}
 		
 	}
