@@ -3,6 +3,14 @@ package com.riaoo.display
 	public interface IAnimation
 	{
 		/**
+		 * 帧与帧之间的播放时间间隔（以毫秒为单位）。默认为 100 毫秒。
+		 * @return 
+		 * 
+		 */		
+		function get delay():int;
+		function set delay(value:int):void;
+		
+		/**
 		 * 当前播放头所处的帧编号。
 		 * @return
 		 *
