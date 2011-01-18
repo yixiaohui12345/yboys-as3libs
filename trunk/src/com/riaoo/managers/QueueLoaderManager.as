@@ -95,12 +95,11 @@ package com.riaoo.managers
 		internal function remove(loader:QueueLoader):void
 		{
 			this.queue[loader.id] = null;
-			loader.id = -1;
-			
 			if (this.currentID == loader.id) // 想移除的 loader 正在下载
 			{
 				next();
 			}
+			loader.id = -1;
 		}
 		
 		// 加载下一个。
@@ -183,8 +182,6 @@ package com.riaoo.managers
 		private function onComplete(event:Event):void
 		{
 			var currentLoader:QueueLoader = this.queue[this.currentID];
-			remove(currentLoader);
-			
 			switch (currentLoader.dataFormat)
 			{
 				// Loader
@@ -228,8 +225,8 @@ package com.riaoo.managers
 				}
 			} // end switch
 			
-			currentLoader.dispatchEvent(event);
-			next();
+			currentLoader.dispatchEvent(event); // 调度 complete 事件
+			remove(currentLoader);
 		}
 		
 		// 加载中。
@@ -242,10 +239,9 @@ package com.riaoo.managers
 		// IO 错误。
 		private function onIOError(event:IOErrorEvent):void
 		{
+			currentLoader.dispatchEvent(event);
 			var currentLoader:QueueLoader = this.queue[this.currentID];
 			remove(currentLoader);
-			currentLoader.dispatchEvent(event);
-			next();
 		}
 		
 		// 清理工作，释放内存。

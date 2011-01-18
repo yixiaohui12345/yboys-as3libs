@@ -17,7 +17,7 @@ package com.riaoo.managers
 	public class QueueLoader extends EventDispatcher
 	{
 		/**
-		 * 在加载队列里的 id 。如果值为 -1 ，则表明此 QueueLoader 对象不在进加载队列中：要么是还没添加到队列，要么是已经加载完的。
+		 * 在加载队列里的 id 。如果值为 -1 ，则表明此 QueueLoader 对象不在进加载队列中：要么是还没添加到队列，要么是已经加载完毕或加载出错。
 		 */		
 		internal var id:int = -1;
 		
@@ -90,6 +90,10 @@ package com.riaoo.managers
 		 */		
 		public function close():void
 		{
+			if (id < 0)
+			{
+				return;
+			}
 			QueueLoaderManager.getInstance().remove(this);
 		}
 		

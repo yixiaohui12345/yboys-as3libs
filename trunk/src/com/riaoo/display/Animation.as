@@ -336,7 +336,7 @@ package com.riaoo.display
 		}
 		
 		/**
-		 * 向指定帧添加代码。
+		 * 向指定帧添加代码。注：一帧只能添加一个函数。
 		 * @param frameIndex 帧索引。
 		 * @param func 要执行的函数。
 		 */		
