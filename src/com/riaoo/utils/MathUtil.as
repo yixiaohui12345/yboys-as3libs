@@ -21,13 +21,14 @@ package com.riaoo.utils
 		 */		
 		public static function clamp(num:Number, min:Number, max:Number):Number
 		{
+			if (num > max)
+			{
+				num = max;
+			}
+			
 			if (num < min)
 			{
 				num = min;
-			}
-			else if (num > max)
-			{
-				num = max;
 			}
 			
 			return num;
