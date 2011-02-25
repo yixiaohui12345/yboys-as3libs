@@ -239,8 +239,8 @@ package com.riaoo.managers
 		// IO 错误。
 		private function onIOError(event:IOErrorEvent):void
 		{
-			currentLoader.dispatchEvent(event);
 			var currentLoader:QueueLoader = this.queue[this.currentID];
+			currentLoader.dispatchEvent(event);
 			remove(currentLoader);
 		}
 		
