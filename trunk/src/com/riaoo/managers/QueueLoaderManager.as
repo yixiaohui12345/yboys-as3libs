@@ -225,8 +225,8 @@ package com.riaoo.managers
 				}
 			} // end switch
 			
-			currentLoader.dispatchEvent(event); // 调度 complete 事件
 			remove(currentLoader);
+			currentLoader.dispatchEvent(event); // 调度 complete 事件
 		}
 		
 		// 加载中。
