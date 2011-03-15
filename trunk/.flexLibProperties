@@ -23,6 +23,7 @@
     <classEntry path="com.riaoo.ui.KeyCombo"/>
     <classEntry path="com.riaoo.utils.FunctionUtil"/>
     <classEntry path="com.riaoo.utils.StringUtil"/>
+    <classEntry path="com.riaoo.utils.ColorUtil"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
