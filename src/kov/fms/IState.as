@@ -6,7 +6,7 @@ package kov.fms
 		 * 执行。
 		 * @param stateMachine 拥有此状态的状态机。
 		 */		
-		function execute(stateMachine:IStateMachine):void;
+		function update(stateMachine:IStateMachine):void;
 		
 		/**
 		 * 进入状态时执行的函数。
