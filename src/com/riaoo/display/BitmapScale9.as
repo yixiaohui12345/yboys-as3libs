@@ -10,7 +10,6 @@ package com.riaoo.display
 	/**
 	 * 支持九切片缩放的 Bitmap 的子类。当设置 width、height、scaleX、scaleY 属性时，会自动进行九切片缩放，而非进行拉伸缩放。
 	 * @author Y.Boy
-	 * 
 	 */	
 	public class BitmapScale9 extends Bitmap
 	{
@@ -19,6 +18,7 @@ package com.riaoo.display
 		public function BitmapScale9(bitmapData:BitmapData = null, pixelSnapping:String = "auto", smoothing:Boolean = false)
 		{
 			super(bitmapData, pixelSnapping, smoothing);
+			this.padding = new Padding();
 		}
 		
 		override public function set bitmapData(value:BitmapData):void
@@ -43,29 +43,16 @@ package com.riaoo.display
 			this.setSize(this.width, value);
 		}
 		
-		override public function set scaleX(value:Number):void
-		{
-			var newWidth:Number = value * this.width;
-			this.setSize(newWidth, this.height);
-		}
-		
-		override public function set scaleY(value:Number):void
-		{
-			var newHeight:Number = value * this.height;
-			this.setSize(this.width, newHeight);
-		}
-		
 		public function setSize(w:Number, h:Number):void
 		{
-			w = Math.max(w, this.padding.left + this.padding.right + 1);
-			h = Math.max(h, this.padding.top + this.padding.bottom + 1);
+			w = Math.max(w, this.padding.left + this.padding.right + 1); // 保证 scale9Grid 部分最小宽度为 1 像素
+			h = Math.max(h, this.padding.top + this.padding.bottom + 1); // 同上
 			this.scale9(w, h);
 			this.updateScale9Grid();
 		}
 		
 		/**
 		 * 进行九切片缩放。
-		 * 
 		 */		
 		protected function scale9(newWidth:Number, newHeight:Number):void
 		{
@@ -102,13 +89,9 @@ package com.riaoo.display
 		/**
 		 * 把 scale9Grid 序列化为 padding。另一种替代方法是，保存原 bitmapData 数据。但保存 padding 信息更多省资源。
 		 * @return 
-		 * 
 		 */		
 		private function updatePadding():void
 		{
-			if (!this.padding)
-				this.padding = new Padding();
-			
 			this.padding.top = this.scale9Grid.y;
 			this.padding.right = this.bitmapData.width - this.scale9Grid.right;
 			this.padding.bottom = bitmapData.height - this.scale9Grid.bottom;
@@ -118,7 +101,6 @@ package com.riaoo.display
 		/**
 		 * 把 padding 序列化为 scale9Grid。计算新的 scale9Grid 值。
 		 * @return 
-		 * 
 		 */		
 		private function updateScale9Grid():void
 		{
