@@ -14,10 +14,10 @@ package kov.fms
 		function changeState(state:IState):void;
 		
 		/**
-		 * 受影响。
-		 * @param data 受影响的数据。
+		 * 输入数据。这是外部影响状态机的输入动作。
+		 * @param data 外部影响状态机的输入数据。
 		 */		
-		function affected(data:*):void;
+		function input(data:*):void;
 		
 		/**
 		 * 当前状态。
