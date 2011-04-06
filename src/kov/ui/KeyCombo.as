@@ -133,5 +133,12 @@ package kov.ui
 			return true;
 		}
 		
+		public function toString():String
+		{
+			return '[KeyCombo id="' + this.id +
+				'" isOrderly="' + this.isOrderly +
+				'" length="' + this.length + '"]';
+		}
+		
 	}
 }
