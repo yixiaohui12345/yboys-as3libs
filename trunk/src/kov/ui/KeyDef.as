@@ -119,5 +119,10 @@ package kov.ui
 			return true;
 		}
 		
+		public function toString():String
+		{
+			return '[KeyDef keyCode="' + this.keyCode + '" status="' + this.status + '"]';
+		}
+		
 	}
 }

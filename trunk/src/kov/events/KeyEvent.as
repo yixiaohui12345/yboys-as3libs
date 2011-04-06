@@ -35,5 +35,10 @@ package kov.events
 			return e;
 		}
 		
+		override public function toString():String
+		{
+			return '[KeyEvent type="' + this.type + '" keyComboID="' + this.keyComboID + '"]';
+		}
+		
 	}
 }

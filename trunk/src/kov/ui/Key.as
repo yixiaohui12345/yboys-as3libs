@@ -144,5 +144,10 @@ package kov.ui
 			return this.keyDownHash[keyCode];
 		}
 		
+		override public function toString():String
+		{
+			return '[Key length="' + this.length + '"]';
+		}
+		
 	}
 }
