@@ -24,6 +24,7 @@
     <classEntry path="com.riaoo.utils.FunctionUtil"/>
     <classEntry path="com.riaoo.utils.StringUtil"/>
     <classEntry path="com.riaoo.utils.ColorUtil"/>
+    <classEntry path="com.riaoo.utils.DisplayObjectUtil"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
