@@ -17,7 +17,7 @@ package com.riaoo.utils
 	[Event(name="tickerComplete",type="com.riaoo.events.TickerEvent")]
 	
 	/**
-	 * Ticker 类是 Timer 类的扩展。可获知每个 TickerEvent.TICKER 事件触发所需要的<strong>实际</strong>延迟间隔（通过 TimerEvent.realDelay 属性可知）。
+	 * Ticker 类是 Timer 类的扩展。可获知每个 TickerEvent.TICKER 事件触发所需要的<strong>实际</strong>延迟间隔（通过 TickerEvent.realDelay 属性可知）。
 	 * <br />
 	 * 所触发的 TickerEvent.TICKER 对应于 TimerEvent.TIMER ，而 TickerEvent.TICKER_COMPLETE 对应于 TimerEvent.TIMER_COMPLETE 。
 	 * 
