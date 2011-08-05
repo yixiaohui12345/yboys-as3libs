@@ -17,7 +17,7 @@ package com.riaoo.file.zip
 		
 		private var _data:ByteArray; // zip 文件包的字节数据。
 		private var _entries:Array; // 所有 entry 信息。一个 entry 对应 zip 文件包里的一个文件（包括文件夹）。
-		private var _comment:String = "技术支持：Y.Boy\n---------------------\nhttp://www.riahome.cn"; // zip 文件注释。
+		private var _comment:String = "技术支持：Y.Boy | http://riaoo.com"; // zip 文件注释。
 		
 		/**
 		 * 构造函数。在创建一个新的 zip 文件包时，不需要传递参数 data 。
