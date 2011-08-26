@@ -137,7 +137,7 @@ package com.riaoo.file.zip
 		}
 		
 		/**
-		 * 根据指定的名称，获取 zip 文件包里的文件条目（Entry），非字节数据。要获取字节数据，请查阅 ZipEntry.getEntryData() 。
+		 * 根据指定的名称，获取 zip 文件包里的文件条目（Entry），非字节数据。要获取字节数据，请查阅 ZipFile.getEntryData() 。
 		 * @param name 文件名称，一个包含完整路径的字符串。
 		 * @return 返回指定名称的文件条目（Entry）。如果文件不存在，则返回 null 。
 		 * 
