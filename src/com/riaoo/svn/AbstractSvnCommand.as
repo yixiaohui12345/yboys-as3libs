@@ -15,6 +15,11 @@ package com.riaoo.svn
 	[Event(name="ioError", type="com.riaoo.svn.SvnEvent")]
 	
 	/**
+	 * 执行过程中，每次有输出数据时调度此事件。
+	 */	
+	[Event(name="progress", type="com.riaoo.svn.SvnEvent")]
+	
+	/**
 	 * 请不要直接实例化抽象类。
 	 * @author yboyjiang
 	 */	
@@ -57,7 +62,7 @@ package com.riaoo.svn
 		 * 执行命令完成后获得的数据。应当监听 result 事件，并判断 SvnEvent.resultStatus 类型。
 		 * @see com.riaoo.svn.SvnEvent.resultStatus
 		 */		
-		public function get resultData():IDataInput
+		public function get resultData():ByteArray
 		{
 			return this._resultData;
 		}
@@ -72,7 +77,17 @@ package com.riaoo.svn
 			{
 				this._resultData = new ByteArray();
 			}
-			data.readBytes(this._resultData, this._resultData.bytesAvailable, data.bytesAvailable);
+			
+			var bytes:ByteArray = new ByteArray();
+			data.readBytes(bytes);
+			
+			bytes.position = 0;
+			bytes.readBytes(this._resultData, this._resultData.bytesAvailable, bytes.bytesAvailable);
+			
+			var e:SvnEvent = new SvnEvent(SvnEvent.PROGRESS);
+			e.currentCommand = this;
+			e.progressData = bytes;
+			this.dispatchEvent(e);
 		}
 		
 		/**

@@ -1,6 +1,7 @@
 package com.riaoo.svn
 {
 	import flash.events.Event;
+	import flash.utils.ByteArray;
 	
 	public class SvnEvent extends Event
 	{
@@ -20,6 +21,11 @@ package com.riaoo.svn
 		public static const RESULT:String = "result";
 		
 		/**
+		 * 执行过程中，每次有输出数据时调度此事件。
+		 */		
+		public static const PROGRESS:String = "progress";
+		
+		/**
 		 * 执行错误事件常量。
 		 */		
 		public static const IO_ERROR:String = "ioError";
@@ -35,6 +41,11 @@ package com.riaoo.svn
 		public var resultStatus:String;
 		
 		/**
+		 * 执行过程中，每次有输出数据时的数据。
+		 */		
+		public var progressData:ByteArray;
+		
+		/**
 		 * 构造函数。
 		 * @param type
 		 */		
@@ -43,10 +54,22 @@ package com.riaoo.svn
 			super(type);
 		}
 		
+		/**
+		 * 执行过程中，把每次的数据打印为字符串信息。
+		 * @return 
+		 */		
+		public function toProgressMessage():String
+		{
+			this.progressData.position = 0;
+			return this.progressData.readMultiByte(this.progressData.bytesAvailable, "gb2312");
+		}
+		
 		override public function clone():Event
 		{
 			var e:SvnEvent = new SvnEvent(this.type);
 			e.currentCommand = this.currentCommand;
+			e.resultStatus = this.resultStatus;
+			e.progressData = this.progressData;
 			return e;
 		}
 		
