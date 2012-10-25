@@ -1,5 +1,7 @@
 package com.riaoo.utils
 {
+	import flash.geom.ColorTransform;
+
 	public class ColorUtil
 	{
 		public function ColorUtil()
@@ -17,6 +19,20 @@ package com.riaoo.utils
 			var g:uint = 0xFF - (rgb >> 8 & 0xFF);
 			var b:uint = 0xFF - (rgb & 0xFF);
 			return (r << 16) | (g << 8) | b;
+		}
+		
+		/**
+		 * 根据 ColorTransform 输出 Flash CS 里的色调颜色。
+		 * @param colorTransform
+		 * @return 
+		 */		
+		public static function colorTransformToTingeColor(colorTransform:ColorTransform):uint
+		{
+			var r:uint = Math.round(colorTransform.redOffset / (1 - colorTransform.redMultiplier));
+			var g:uint = Math.round(colorTransform.greenOffset / (1 - colorTransform.greenMultiplier));
+			var b:uint = Math.round(colorTransform.blueOffset / (1 - colorTransform.blueMultiplier));
+			var colorNum:uint = r<<16 | g<<8 | b;
+			return colorNum; 
 		}
 		
 	}

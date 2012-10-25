@@ -1,10 +1,14 @@
 package com.riaoo.svn
 {
-	
-	import flash.utils.IDataInput;
-	
+	/**
+	 * 把文件和目录纳入版本控制，通过调度加到版本库。它们会在下一次提交时加入。
+	 * @author yboyjiang
+	 */	
 	public class AddSvnCommand extends AbstractSvnCommand
 	{
+		/**
+		 * 要添加的目录或文件的路径。
+		 */		
 		public var path:String;
 		
 		public function AddSvnCommand()
