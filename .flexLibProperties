@@ -25,9 +25,6 @@
     <classEntry path="com.riaoo.utils.StringUtil"/>
     <classEntry path="com.riaoo.utils.ColorUtil"/>
     <classEntry path="com.riaoo.utils.DisplayObjectUtil"/>
-    <classEntry path="com.riaoo.svn.AddSvnCommand"/>
-    <classEntry path="com.riaoo.svn.CheckoutSvnCommand"/>
-    <classEntry path="com.riaoo.svn.SvnDepthEnum"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
