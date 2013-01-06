@@ -56,7 +56,7 @@ package com.riaoo.utils
 		 */		
 		public function get array():Array
 		{
-			return this.m_array.concat();
+			return this.m_array;
 		}
 		
 		/**
@@ -222,6 +222,16 @@ package com.riaoo.utils
 		public function toString():String
 		{
 			return this.m_array.toString();
+		}
+		
+		public function getItemAt(index:int):Object
+		{
+			return this.m_array[index];
+		}
+		
+		public function getItemBy(key:Object):Object
+		{
+			return this.m_hash[key];
 		}
 		
 		// TODO:
