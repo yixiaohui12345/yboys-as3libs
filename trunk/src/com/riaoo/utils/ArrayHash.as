@@ -224,11 +224,22 @@ package com.riaoo.utils
 			return this.m_array.toString();
 		}
 		
+		/**
+		 * 获取指定索引的值。
+		 * @param index
+		 * @return 
+		 */		
 		public function getItemAt(index:int):Object
 		{
 			return this.m_array[index];
 		}
 		
+		/**
+		 * 获取指定键的值。
+		 * @param key
+		 * @return 
+		 * 
+		 */		
 		public function getItemBy(key:Object):Object
 		{
 			return this.m_hash[key];
