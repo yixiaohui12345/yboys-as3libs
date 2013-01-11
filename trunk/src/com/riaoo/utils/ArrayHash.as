@@ -1,4 +1,4 @@
-package com.riaoo.utils
+package com.tencent.ai.core.utils
 {
 	import flash.utils.Dictionary;
 	
@@ -77,7 +77,7 @@ package com.riaoo.utils
 		 */		
 		public function push(item:Object, key:Object=null):uint
 		{
-			if (!key)
+			if (key === null)
 			{
 				key = "#key"+this.m_sum;
 			}
@@ -115,7 +115,7 @@ package com.riaoo.utils
 		 */		
 		public function unshift(item:Object, key:Object=null):uint
 		{
-			if (!key)
+			if (key === null)
 			{
 				key = "#key"+this.m_sum;
 			}
@@ -183,7 +183,7 @@ package com.riaoo.utils
 		 */		
 		public function addItemAt(item:Object, index:int, key:Object=null):void
 		{
-			if (!key)
+			if (key === null)
 			{
 				key = "#key"+this.m_sum;
 			}
