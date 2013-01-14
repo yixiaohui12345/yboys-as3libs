@@ -1,4 +1,4 @@
-package com.tencent.ai.core.utils
+package com.riaoo.utils
 {
 	import flash.utils.Dictionary;
 	
